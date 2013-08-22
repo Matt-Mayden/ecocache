@@ -4,8 +4,8 @@ CREATE DATABASE `geo_cache` /*!40100 COLLATE 'utf8_unicode_ci' */;
 #environment table - description of area user is spotting from
 CREATE TABLE `environment` (
 	`environment_id` INT(10) NOT NULL AUTO_INCREMENT,
-	`evnironment_name` VARCHAR(150) NOT NULL DEFAULT 'Unnamed Location',
-	PRIMARY KEY (`category_id`)
+	`environment_name` VARCHAR(150) NOT NULL DEFAULT 'Unnamed Location',
+	PRIMARY KEY (`environment_id`)
 )
 
 #category table - collective name for objects
