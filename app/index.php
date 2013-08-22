@@ -28,3 +28,6 @@ define('MAKO_APPLICATION_PATH', __DIR__ . '/app');
 require __DIR__ . '/vendor/mako/framework/src/mako/boot.php';
 
 mako\Mako::factory()->run();
+
+echo "hi!";
+$connection = mako\Database::connection('ecoDb');
