@@ -9,15 +9,15 @@ return array
 	/**
 	 * Default configuration to use.
 	 */
-	
-	'default' => 'test',
+
+	'default' => 'ecoDb',
 
 	/**
 	 * Enable the query log?
 	 */
 
 	'log_queries' => false,
-	
+
 	/**
 	 * You can define as many database configurations as you want.
 	 *
@@ -27,14 +27,14 @@ return array
 	 * persistent: (optional) Set to true to make the connection persistent
 	 * queries   : (optional) Queries that will be executed right after a connection has been made
 	 */
-	
+
 	'configurations' => array
 	(
-		'test' => array
+		'ecoDb' => array
 		(
-			'dsn'        => 'mysql:dbname=test;host=localhost;port=3306',
-			'username'   => 'username',
-			'password'   => 'password',
+			'dsn'        => 'mysql:dbname=geo_cache;host=localhost;port=3306',
+			'username'   => 'root',
+			'password'   => '',
 			'persistent' => false,
 			'queries'    => array
 			(
@@ -49,7 +49,7 @@ return array
 			(
 				"PRAGMA encoding = 'UTF-8'",
 			),
-		),	
+		),
 	),
 );
 
