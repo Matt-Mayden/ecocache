@@ -25,6 +25,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="js/vendor/bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="js/vendor/bootstrap/css/bootstrap-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
         <title>Eco-Cache</title>
     </head>
     <body>
@@ -36,28 +37,9 @@
             </div>
         </div>-->
         <div class="container">
-            <div class="row">
-                <div class="span5">
-                    TOP LEFT
-                </div>
-                <div class="span4">
-                    TOP RIGHT
-                </div>
-            </div>
-            <div class="row">
-                <div class="span5">
-                    LEFT
-                </div>
-                <div class="span4">
-                    RIGHT
-                </div>
-            </div>
-            <div class="row">
-                <div class="span5">
-                    BOTTOM LEFT
-                </div>
-                <div class="span4">
-                    BOTTOM RIGHT
+            <div class="row" id="app_container">
+                <div class="span9">
+                    DIV
                 </div>
             </div>
         </div>
@@ -67,6 +49,7 @@
         <script type="text/javascript" src="js/vendor/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="js/vendor/underscore/underscore.js"></script>
         <script type="text/javascript" src="js/vendor/backbone/backbone.js"></script>
+        <script type="text/javascript" src="js/vendor/marionette/backbone.marionette.js"></script>
         <script type="text/javascript" data-main="js/main" src="js/vendor/requirejs/require.js"></script>
         <script type="text/javascript">
             app.initialize();
@@ -75,7 +58,7 @@
                     MainApp.initialize();
                 });
             });
-            APP_BASE_URL = 'http://192.168.20.30/';
+            APP_BASE_URL = 'http://192.168.20.30';
         </script>
     </body>
 </html>
