@@ -1,14 +1,16 @@
 <?php
 
 /**
- *
+ * Model for category
  *
  */
+namespace app\models;
 class Category extends Model
 {
 	const TABLE_NAME = '`category`';
 
 	/**
+	 * Constructor
 	 *
 	 */
 	__construct()
