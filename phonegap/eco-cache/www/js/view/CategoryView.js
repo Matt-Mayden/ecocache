@@ -1,6 +1,7 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+define(['text!view/test.html'], function(categoryTemplate) {
+    var categoryView = Backbone.View.extend({
+        template: _.template(categoryTemplate)
+    });
 
-
+    return categoryView;
+});
