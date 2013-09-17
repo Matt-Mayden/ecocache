@@ -1,1 +1,1 @@
-Ecocache github for the Foss4g Hackathon
+Ecocache github for the Foss4g Hackathon in Nottingham
