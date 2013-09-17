@@ -16,14 +16,12 @@ class Category extends Model
 
 	function __construct()
 	{
-        parent::_construct();
+        parent::__construct();
 	}
 
 	public function getCategories()
 	{
-		$query = "SELECT `category_id`, `category_name` FROM " . self::TABLE_NAME;
-		$categories = $this->ecoDb->all($query);
-
+	    $categories = $this->ecoDb->table(self::TABLE_NAME)->all();
 	    return $categories;
 	}
 

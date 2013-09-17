@@ -11,7 +11,7 @@ class Model
 {
 	protected $ecoDb = null;
 
-	function _construct()
+	function __construct()
 	{
 		$this->ecoDb = \mako\Database::connection('ecoDb');
 	}
