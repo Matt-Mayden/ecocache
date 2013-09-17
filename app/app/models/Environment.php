@@ -4,6 +4,8 @@
  *
  *
  */
+namespace app\models;
+
 class Environment extends Model
 {
     const TABLE_NAME = "environment";
