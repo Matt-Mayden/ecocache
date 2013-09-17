@@ -1,89 +1,51 @@
-<html>
-<head>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css">
-<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css">
-<style>
-.container{background-color:#f4f4f4}
-.btn-default {
-    padding: 5px;
-    font-size: 11pt;
-    margin:16px;
-    width:110px;
-    margin:0px 16px 0px 0px;
-    }
-.row
-{
-    margin-bottom:30px;    
-}
-.colorswatch
-{
-    width:30px;
-    height:30px;
-    margin-right:20px;
-    border:none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-</style>
-<!-- Latest compiled and minified JavaScript -->
-<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>   
-</head>
-  <body>
-    <div class="container">
+<div class="container">
+    <form>
         <h1 class="text-center">Tell me more about it?</h1>
         <div class="text-left">
             <div class="row">
                 <div class="span3">How big was it?</div>
                 <div class="span9">
                     <p>As big as a...</p>
-                    <button type="button" class="btn btn-default">Mouse</button>
-                    <button type="button" class="btn btn-default">Dog</button>
-                    <button type="button" class="btn btn-default">Hippo</button>
-                    <button type="button" class="btn btn-default">Camel</button>
-                    <button type="button" class="btn btn-default">Giraffe</button>
+                    <input type="button" class="btn btn-default" value="Mouse"/>
+                    <input type="button" class="btn btn-default" value="Dog"/>
+                    <input type="button" class="btn btn-default" value="Hippo"/>
+                    <input type="button" class="btn btn-default" value="Camel"/>
+                    <input type="button" class="btn btn-default" value="Giraffe"/>
                 </div>
             </div>
             <div class="row">
                 <div class="span3">What colour was it?</div>
                 <div class="span9">
-                    <button type="button" class="colorswatch" style="background-color:#6F4315;"></button>
-                    <button type="button" class="colorswatch" style="background-color:#DA842A;"></button>
-                    <button type="button" class="colorswatch" style="background-color:#c676da;"></button>
-                    <button type="button" class="colorswatch" style="background-color:#12d34b;"></button>
-                    <button type="button" class="colorswatch" style="background-color:#3dae41;"></button>
-                    <button type="button" class="colorswatch" style="background-color:#009900;"></button>
+                    <input type="button" class="colorswatch" style="background-color:#6F4315;"/>
+                    <input type="button" class="colorswatch" style="background-color:#DA842A;"/>
+                    <input type="button" class="colorswatch" style="background-color:#c676da;"/>
+                    <input type="button" class="colorswatch" style="background-color:#12d34b;"/>
+                    <input type="button" class="colorswatch" style="background-color:#3dae41;"/>
+                    <input type="button" class="colorswatch" style="background-color:#009900;"/>
                 </div>
             </div>
             <div class="row">
                 <div class="span3">Where did you see it?</div>
                 <div class="span9">
-                    <button type="button" class="btn btn-default">On the Ground</button>
-                    <button type="button" class="btn btn-default">On a Plant</button>
-                    <button type="button" class="btn btn-default">In a Tree</button>
-                    <button type="button" class="btn btn-default">In the Sky</button>
-                    <button type="button" class="btn btn-default">Inside</button>
+                    <input type="button" class="btn btn-default" value="On the Ground"/>
+                    <input type="button" class="btn btn-default" value="On a Plant"/>
+                    <input type="button" class="btn btn-default" value="In a Tree"/>
+                    <input type="button" class="btn btn-default" value="In the Sky"/>
+                    <input type="button" class="btn btn-default" value="Inside"/>
                 </div>
             </div>
             <div class="row">
                 <div class="span3">Did you take a photo?</div>
                 <div class="span9">
-                    <button style="width:150px;" type="button" class="btn btn-default btn-lg">
-                     <span class="icon icon-search"></span> Choose One
-                  </button>
-                                        <button style="width:150px;" type="button" class="btn btn-default btn-lg">
-                     <span class="icon icon-camera"></span> Take a photo
-                  </button>  
+                    
+                    <input style="width:150px;" type="button" class="btn btn-default btn-lg" value="Choose a photo"/>
+                    <input style="width:150px;" type="button" class="btn btn-default btn-lg" value="Take a photo"/>
                 </div>
             </div>
             <div></div>
             <div class="span4 offset4">
-                <button type="button" class="btn btn-large btn-block">Record Your Discovery</button>
+                <input type="button" class="btn btn-large btn-block">Record Your Discovery"/>
             </div>
         </div>
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../vendor/jquery/jquery.js"></script>
-  </body>
-</html>
+    </form>
+</div>
