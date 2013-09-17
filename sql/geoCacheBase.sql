@@ -66,6 +66,16 @@ COMMENT='Links objects to categories'
 COLLATE='utf8_unicode_ci'
 ENGINE=MyISAM;
 
+#Category environment linking table
+CREATE TABLE `category_environment` (
+	`category_id` INT(10) NOT NULL DEFAULT '0',
+	`environment_id` INT(10) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`category_id`, `environment_id`)
+)
+COMMENT='Links categories to environments'
+COLLATE='utf8_unicode_ci'
+ENGINE=MyISAM;
+
 #Location date storage
 CREATE TABLE `location` (
 	`location_id` INT(10) NOT NULL AUTO_INCREMENT,
