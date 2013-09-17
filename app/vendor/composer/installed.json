@@ -1,29 +1,32 @@
 [
     {
-        "name": "slim/slim",
-        "version": "2.3.1",
-        "version_normalized": "2.3.1.0",
+        "name": "filp/whoops",
+        "version": "1.0.7",
+        "version_normalized": "1.0.7.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/codeguy/Slim.git",
-            "reference": "2e540cc392644b9b5cdcc57e5576db5a92ca2149"
+            "url": "https://github.com/filp/whoops.git",
+            "reference": "12e144c788b275e5869ac15eda7bd0ae5da775bd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/codeguy/Slim/zipball/2e540cc392644b9b5cdcc57e5576db5a92ca2149",
-            "reference": "2e540cc392644b9b5cdcc57e5576db5a92ca2149",
+            "url": "https://api.github.com/repos/filp/whoops/zipball/12e144c788b275e5869ac15eda7bd0ae5da775bd",
+            "reference": "12e144c788b275e5869ac15eda7bd0ae5da775bd",
             "shasum": ""
         },
         "require": {
-            "ext-mcrypt": "*",
             "php": ">=5.3.0"
         },
-        "time": "2013-07-20 18:38:05",
+        "require-dev": {
+            "mockery/mockery": "dev-master",
+            "silex/silex": "1.0.*@dev"
+        },
+        "time": "2013-06-10 12:22:13",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-0": {
-                "Slim": "."
+                "Whoops": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -32,17 +35,73 @@
         ],
         "authors": [
             {
-                "name": "Josh Lockhart",
-                "email": "info@joshlockhart.com",
-                "homepage": "http://www.joshlockhart.com/"
+                "name": "Filipe Dobreira",
+                "homepage": "https://github.com/filp",
+                "role": "Developer"
             }
         ],
-        "description": "Slim Framework, a PHP micro framework",
-        "homepage": "http://github.com/codeguy/Slim",
+        "description": "php error handling for cool kids",
+        "homepage": "https://github.com/filp/whoops",
         "keywords": [
-            "microframework",
-            "rest",
-            "router"
+            "error",
+            "exception",
+            "handling",
+            "library",
+            "silex-provider",
+            "whoops",
+            "zf2"
+        ]
+    },
+    {
+        "name": "mako/framework",
+        "version": "3.6.x-dev",
+        "version_normalized": "3.6.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mako-framework/framework.git",
+            "reference": "b1f5b26101a72fa737de7e05968c5d9a3e26542d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mako-framework/framework/zipball/b1f5b26101a72fa737de7e05968c5d9a3e26542d",
+            "reference": "b1f5b26101a72fa737de7e05968c5d9a3e26542d",
+            "shasum": ""
+        },
+        "require": {
+            "filp/whoops": "1.0.7",
+            "php": ">=5.3.1"
+        },
+        "require-dev": {
+            "mockery/mockery": "0.8.*",
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2013-09-17 12:14:05",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "mako": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Frederic G. \u00d8stby",
+                "email": "frederic.g.ostby@gmail.com"
+            },
+            {
+                "name": "Contributors",
+                "homepage": "http://makoframework.com/contributors"
+            }
+        ],
+        "description": "Mako Framework",
+        "homepage": "http://makoframework.com",
+        "keywords": [
+            "framework",
+            "mako"
         ]
     }
 ]
