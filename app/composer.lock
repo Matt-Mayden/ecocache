@@ -3,30 +3,33 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "3572ef5486e01be41b96a1fdace500a6",
+    "hash": "5ee7580854be9c730f033626103a6f3a",
     "packages": [
         {
-            "name": "slim/slim",
-            "version": "2.3.1",
+            "name": "filp/whoops",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/codeguy/Slim.git",
-                "reference": "2e540cc392644b9b5cdcc57e5576db5a92ca2149"
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "12e144c788b275e5869ac15eda7bd0ae5da775bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeguy/Slim/zipball/2e540cc392644b9b5cdcc57e5576db5a92ca2149",
-                "reference": "2e540cc392644b9b5cdcc57e5576db5a92ca2149",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/12e144c788b275e5869ac15eda7bd0ae5da775bd",
+                "reference": "12e144c788b275e5869ac15eda7bd0ae5da775bd",
                 "shasum": ""
             },
             "require": {
-                "ext-mcrypt": "*",
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "silex/silex": "1.0.*@dev"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Slim": "."
+                    "Whoops": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -35,19 +38,73 @@
             ],
             "authors": [
                 {
-                    "name": "Josh Lockhart",
-                    "email": "info@joshlockhart.com",
-                    "homepage": "http://www.joshlockhart.com/"
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
                 }
             ],
-            "description": "Slim Framework, a PHP micro framework",
-            "homepage": "http://github.com/codeguy/Slim",
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
             "keywords": [
-                "microframework",
-                "rest",
-                "router"
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "silex-provider",
+                "whoops",
+                "zf2"
             ],
-            "time": "2013-07-20 18:38:05"
+            "time": "2013-06-10 12:22:13"
+        },
+        {
+            "name": "mako/framework",
+            "version": "3.6.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mako-framework/framework.git",
+                "reference": "b1f5b26101a72fa737de7e05968c5d9a3e26542d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mako-framework/framework/zipball/b1f5b26101a72fa737de7e05968c5d9a3e26542d",
+                "reference": "b1f5b26101a72fa737de7e05968c5d9a3e26542d",
+                "shasum": ""
+            },
+            "require": {
+                "filp/whoops": "1.0.7",
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.8.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "mako": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Frederic G. \u00d8stby",
+                    "email": "frederic.g.ostby@gmail.com"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "http://makoframework.com/contributors"
+                }
+            ],
+            "description": "Mako Framework",
+            "homepage": "http://makoframework.com",
+            "keywords": [
+                "framework",
+                "mako"
+            ],
+            "time": "2013-09-17 12:14:05"
         }
     ],
     "packages-dev": [
@@ -56,13 +113,13 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [
 
     ],
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.3.1"
+    },
     "platform-dev": [
 
     ]
