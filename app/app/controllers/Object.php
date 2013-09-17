@@ -34,14 +34,14 @@ class Object extends \mako\Controller
             $objects = $this->model->getObjectsForCategory($category_id);
             $objectsJson = json_encode($objects);
 
-            var_dump($objectsJson);
+            echo $objectsJson;
         }
 	    else
 	    {
 	        $objects = $this->model->getObjects();
 	        $objectsJson = json_encode($objects);
 
-	        var_dump($objectsJson);
+	        echo $objectsJson;
 	    }
 	}
 }
