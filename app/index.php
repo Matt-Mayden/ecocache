@@ -29,9 +29,9 @@ require __DIR__ . '/vendor/mako/framework/src/mako/boot.php';
 
 mako\Mako::factory()->run();
 
-echo "hi!";
+mako\ClassLoader::directory('app/models/');
 
-require_once("app/models/Environment.php");
+//require_once("app/models/Environment.php");
 
 $environment = new Environment();
 

@@ -8,9 +8,9 @@ class Model
 {
 	protected $ecoDb = null;
 
-	__construct()
+	function _construct()
 	{
-		$ecoDb = mako\Database::connection('ecoDb');
+		$this->ecoDb = mako\Database::connection('ecoDb');
 	}
 }
 

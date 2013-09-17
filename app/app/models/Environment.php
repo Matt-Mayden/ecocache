@@ -12,12 +12,13 @@ class Environment extends Model
      */
     function __construct()
     {
-
+        parent::_construct();
     }
 
     public function getEnvironments()
     {
-        $this->ecoDb->all('SELECT * from `' . self::TABLE_NAME . '`');
+        $environments = $this->ecoDb->all('SELECT * from `' . self::TABLE_NAME . '`');
+        return $environments;
     }
 
 }
