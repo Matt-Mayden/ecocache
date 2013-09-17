@@ -1,4 +1,4 @@
 requirejs.config({
-	baseUrl: '/js'
+	baseUrl: '/geohack/ecocache/phonegap/eco-cache/www/js'
 });
 
