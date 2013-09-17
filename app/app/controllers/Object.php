@@ -27,8 +27,10 @@ class Object extends \mako\Controller
 	 */
 	public function get_index()
 	{
-        if(1)
-        {
+	    $category_id = \mako\Input::get("category_id", null);
+
+	    if(isset($category_id))
+	    {
             $objects = $this->model->getObjectsForCategory($category_id);
             $objectsJson = json_encode($objects);
 

@@ -30,13 +30,10 @@ class Category extends \mako\Controller
 
 	    if(isset($environment_id))
 	    {
-	        if($environment_id)
-	        {
-	            $categories = $this->model->getCategoriesForEnvironment($environment_id);
-	            $categoriesJson = json_encode($categories);
+	        $categories = $this->model->getCategoriesForEnvironment($environment_id);
+	        $categoriesJson = json_encode($categories);
 
-	            return $categoriesJson;
-	        }
+	        return $categoriesJson;
 	    }
 	    else
 	    {
