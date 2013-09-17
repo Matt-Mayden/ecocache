@@ -1,12 +1,10 @@
-<div class="container">
     <h1 class="text-center"><%- message %></h1>
     <div class="text-left">
         <% _.each(collection, function(object) 
         {
         %>
-        <button type="button" value="<%= object.id %>" class="btn btn-default"><%= object.name %></button>
+        <button type="button" value="<%= object.id %>" class="<%- buttonName %>"> <img class="<%- buttonName %>" src="img/car.png" /> <%= object.name %></button>
         <%
         });
         %>
     </div>
-</div>

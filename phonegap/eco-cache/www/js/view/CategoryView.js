@@ -3,8 +3,9 @@ define(['text!view/shared_view.html',
     'collection/ObjectCollection'], function(categoryTemplate, ObjectView, ObjectCollection) {
     var envView = Backbone.View.extend({
         el: '#app_container',
-        environment_id : '',
+        environment_id: '',
         initialize: function(options) {
+            this.environment_id = options.environment_id;
             this.collection.fetch({
                 data: { environment_id: options.environment_id },
                 success: _.bind(function() {
@@ -16,19 +17,19 @@ define(['text!view/shared_view.html',
         render: function() {
             $(this.el).html(_.template(categoryTemplate)({
                 collection: this.collection.toJSON(),
-                message: 'What did you see?'
+                message: 'What did you see?',
+                buttonName: 'category'
             }));
             return this;
         },
         events: {
-            "click .btn-default": "getObjects"
+            "click .category": "getObjects"
         },
         getObjects: function(e) {
-            console.log('calling me');
-            var categoryId = e.target.value;
+            var categoryId = e.currentTarget.value;
             if (categoryId) {
                 var objectCollection = new ObjectCollection();
-                new ObjectView({collection: objectCollection});
+                new ObjectView({environment_id: this.environment_id, category_id: categoryId, collection: objectCollection});
             }
 
         }

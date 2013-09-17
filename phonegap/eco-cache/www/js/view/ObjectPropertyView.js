@@ -2,7 +2,9 @@ define(['text!view/object_properties_view.html',
     'view/ObjectPropertyView'], function(objectPropertyTemplate, ObjectPropertyView) {
     var envView = Backbone.View.extend({
         el: '#app_container',
-        initialize: function() {
+        options: '',
+        initialize: function(options) {
+            this.options = options;
             $(this.el).unbind();
             this.render();
         },
@@ -29,6 +31,11 @@ define(['text!view/object_properties_view.html',
                     data[this.name] = this.value;
                 }
             });
+            for(var key in this.options){
+                if(typeof(this.options[key]) != 'object'){
+                    data[key] = this.options[key];
+                }
+            }
             this.model.set(data);
             this.model.save(null, {
                 success: _.bind(function(model, response) {
