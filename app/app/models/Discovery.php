@@ -38,8 +38,6 @@ class Discovery extends Model
         {
             if($value == null)
             {
-                var_dump($post);
-                echo "NULL value in POST";
                 return false;
             }
             else

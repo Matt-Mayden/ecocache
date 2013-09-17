@@ -39,8 +39,8 @@ class Discovery extends \mako\Controller
         $post['category_id'] = \mako\Input::post("category_id", null);
         $post['object_id'] = \mako\Input::post("object_id", null);
         $post['object_size_id'] = \mako\Input::post("size_id", null);
-        $post['object_colour_id'] = \mako\Input::post("colour_id", null);
-        $post['object_location_id'] = \mako\Input::post("location_id", null);
+        $post['object_colour'] = \mako\Input::post("colour_id", null);
+        $post['location_id'] = \mako\Input::post("location_id", null);
 
         $this->model->putDiscovery($post);
     }
