@@ -5,16 +5,18 @@
  *
  */
 namespace app\controllers;
-use app\models as models
-class Object
+use app\models as models;
+
+class Object extends \mako\Controller
 {
-	private $objectModel = null;
+    const RESTFUL = true;
+	private $model = null;
 
 	/**
 	 * Constructor
 	 *
 	 */
-	__construct()
+    function __construct()
 	{
 		$this->model = new models\Object();
 	}
@@ -23,12 +25,22 @@ class Object
 	 *
 	 *
 	 */
-	public function getObjects()
+	public function get_index()
 	{
-		$objArr = $this->model->getObjects();
-		$objJson = json_encode($objArr);
+        if(1)
+        {
+            $objects = $this->model->getObjectsForCategory($category_id);
+            $objectsJson = json_encode($objects);
 
-		return $objJson;
+            var_dump($objectsJson);
+        }
+	    else
+	    {
+	        $objects = $this->model->getObjects();
+	        $objectsJson = json_encode($objects);
+
+	        var_dump($objectsJson);
+	    }
 	}
 }
 

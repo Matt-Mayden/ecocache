@@ -4,6 +4,8 @@
  *
  *
  */
+namespace app\models;
+
 class Object extends Model
 {
     const TABLE_NAME = "object";
@@ -17,8 +19,14 @@ class Object extends Model
 
     public function getObjects()
     {
-        $environments = $this->ecoDb->all('SELECT `object_id`, `object_name` from `' . self::TABLE_NAME . '`');
-        return $environments;
+        $objects = $this->ecoDb->all('SELECT `object_id`, `object_name` from `' . self::TABLE_NAME . '`');
+        return $objects;
+    }
+
+    public function getObjectsForCategory($category_id)
+    {
+        $objects = $this->ecoDb->all('SELECT `object_id`, `object_name` from `' . self::TABLE_NAME . '`');
+        return $objects;
     }
 
 }
