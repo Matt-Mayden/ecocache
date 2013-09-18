@@ -34,25 +34,12 @@ class Discovery extends Model
 
     public function putDiscovery($post)
     {
-        foreach($post as $key=>$value)
+        if($post['environment_id'] == null ||
+           $post['category_id'] == null ||
+           $post['object_id'] == null)
         {
-            if($value == null)
-            {
-                return false;
-            }
-            else
-            {
-                $post[$key] = (int)$value;
-            }
+            return false;
         }
-
-        /*
-        $fieldString = "`environment_id`, `category_id`, `object_id`, `size_id`, `colour_id`, `location_id`";
-
-        $query = "INSERT INTO `" . self::TABLE_NAME . "` (" . $fieldString . ")
-        VALUES (" . $post['environment_id'] . ", " . $post['category_id'] . ", " . $post['object_id'] . ", " . $post['size_id'] . ", " . $post['colour_id'] . ", " . $post['location_id'] . ", )";
-        $insert = $this->ecoDb->all($query);
-        */
         $this->ecoDb->table(self::TABLE_NAME)
         ->insert($post);
     }
