@@ -14,7 +14,7 @@ class Environment extends Model
      */
     function __construct()
     {
-        parent::_construct();
+        parent::__construct();
     }
 
     public function getEnvironments()
