@@ -177,3 +177,61 @@ Linux Install
         
         sudo /etc/init.d/apache2 restart
 
+
+
+Mako
+----
+
+    Installing Mako is easy and can be with one single command thanks to composer: ::
+
+        composer create-project mako/app <project name>
+
+    Remember to make the app/storage/* directories writable.
+    
+    Mako can now be updated using the following command: ::
+
+        composer update
+
+    *Basic Apache Configuration* ::
+
+        <VirtualHost *:80>
+        DocumentRoot /srv/www/mako/htdocs
+
+        <Directory /srv/www/mako/htdocs>
+            
+            Options -Indexes FollowSymLinks -MultiViews
+            AllowOverride All
+            Order allow,deny
+            allow from all
+
+            # URL rewrite
+            RewriteEngine on
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule ^(.*)$ index.php/$1 [L]
+
+        </Directory>
+
+        LogLevel warn
+        ErrorLog /srv/www/mako/logs/error.log
+        CustomLog /srv/www/mako/logs/access.log combined
+
+        </VirtualHost>
+
+
+Bootstrap
+---------
+    To install Bootstrap framework download from this link http://getbootstrap.com/getting-started/ and copy in the destination directory.
+
+
+
+
+
+
+
+
+
+
+
+
+
