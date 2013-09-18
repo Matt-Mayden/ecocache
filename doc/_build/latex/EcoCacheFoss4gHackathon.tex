@@ -339,6 +339,60 @@ sudo /etc/init.d/apache2 restart
 \end{quote}
 
 
+\section{Mako}
+\label{prerequisites:id1}\begin{quote}
+
+Installing Mako is easy and can be with one single command thanks to composer:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+composer create-project mako/app \textless{}project name\textgreater{}
+\end{Verbatim}
+
+Remember to make the app/storage/* directories writable.
+
+Mako can now be updated using the following command:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+composer update
+\end{Verbatim}
+
+\emph{Basic Apache Configuration}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\textless{}VirtualHost *:80\textgreater{}
+DocumentRoot /srv/www/mako/htdocs
+
+\textless{}Directory /srv/www/mako/htdocs\textgreater{}
+
+    Options -Indexes FollowSymLinks -MultiViews
+    AllowOverride All
+    Order allow,deny
+    allow from all
+
+    \# URL rewrite
+    RewriteEngine on
+    RewriteCond \%\PYGZob{}REQUEST\_FILENAME\PYGZcb{} !-f
+    RewriteCond \%\PYGZob{}REQUEST\_FILENAME\PYGZcb{} !-d
+    RewriteRule \textasciicircum{}(.*)\$ index.php/\$1 [L]
+
+\textless{}/Directory\textgreater{}
+
+LogLevel warn
+ErrorLog /srv/www/mako/logs/error.log
+CustomLog /srv/www/mako/logs/access.log combined
+
+\textless{}/VirtualHost\textgreater{}
+\end{Verbatim}
+\end{quote}
+
+
+\section{Bootstrap}
+\label{prerequisites:id2}\begin{quote}
+
+To install Bootstrap framework download from this link \href{http://getbootstrap.com/getting-started/}{http://getbootstrap.com/getting-started/} and copy in the destination directory.
+\end{quote}
+
+
 \chapter{Table Structure}
 \label{sql::doc}\label{sql:table-structure}\begin{description}
 \item[{The table structure to store and manage data acquisition are described below:}] \leavevmode

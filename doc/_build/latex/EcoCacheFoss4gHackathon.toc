@@ -3,5 +3,7 @@
 \contentsline {section}{\numberline {1.1}WAMP/LAMP Environment}{3}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Windows Install}{3}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Linux Install}{3}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Mako}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Bootstrap}{6}{section.1.3}
 \contentsline {chapter}{\numberline {2}Table Structure}{7}{chapter.2}
 \contentsline {chapter}{\numberline {3}Indices and tables}{9}{chapter.3}

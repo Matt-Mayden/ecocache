@@ -170,6 +170,48 @@ To do this we will need to open a file entitled php.ini. To open it type the fol
 </div></blockquote>
 </div>
 </div>
+<div class="section" id="id1">
+<h2>1.2. Mako<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Installing Mako is easy and can be with one single command thanks to composer:</p>
+<div class="highlight-python"><pre>composer create-project mako/app &lt;project name&gt;</pre>
+</div>
+<p>Remember to make the app/storage/* directories writable.</p>
+<p>Mako can now be updated using the following command:</p>
+<div class="highlight-python"><pre>composer update</pre>
+</div>
+<p><em>Basic Apache Configuration</em></p>
+<div class="highlight-python"><pre>&lt;VirtualHost *:80&gt;
+DocumentRoot /srv/www/mako/htdocs
+
+&lt;Directory /srv/www/mako/htdocs&gt;
+
+    Options -Indexes FollowSymLinks -MultiViews
+    AllowOverride All
+    Order allow,deny
+    allow from all
+
+    # URL rewrite
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+&lt;/Directory&gt;
+
+LogLevel warn
+ErrorLog /srv/www/mako/logs/error.log
+CustomLog /srv/www/mako/logs/access.log combined
+
+&lt;/VirtualHost&gt;</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>1.3. Bootstrap<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>To install Bootstrap framework download from this link <a class="reference external" href="http://getbootstrap.com/getting-started/">http://getbootstrap.com/getting-started/</a> and copy in the destination directory.</div></blockquote>
+</div>
 </div>
 
 
@@ -186,6 +228,8 @@ To do this we will need to open a file entitled php.ini. To open it type the fol
 <li><a class="reference internal" href="#linux-install">1.1.2. Linux Install</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id1">1.2. Mako</a></li>
+<li><a class="reference internal" href="#id2">1.3. Bootstrap</a></li>
 </ul>
 </li>
 </ul>
