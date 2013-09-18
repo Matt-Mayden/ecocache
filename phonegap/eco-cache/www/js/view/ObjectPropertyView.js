@@ -43,7 +43,7 @@ define(['text!view/object_properties_view.html',
                     new DiscoveryView();
                 },this)
             });
-            new DiscoveryView();
+            
         }
     });
     return envView;
