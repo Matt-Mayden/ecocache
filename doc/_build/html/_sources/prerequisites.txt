@@ -224,6 +224,14 @@ Bootstrap
     To install Bootstrap framework download from this link http://getbootstrap.com/getting-started/ and copy in the destination directory.
 
 
+EcoCache Install
+^^^^^^^^^^^^^^^^
+
+To install EcoCache App you need to clone from github https://github.com/ecocache/ecocache and copy in target
+of your webroot Apache directory ::
+
+    git pull https://github.com/ecocache/ecocache
+
 
 
 
