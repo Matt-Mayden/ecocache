@@ -30,7 +30,7 @@ class Environment extends \mako\Controller
     {
         $environments = $this->model->getEnvironments();
         $environmentsJson = json_encode($environments);
-        var_dump($environmentsJson);
+        echo $environmentsJson;
     }
 }
 ?>

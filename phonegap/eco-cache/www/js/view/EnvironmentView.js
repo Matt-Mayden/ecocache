@@ -25,7 +25,7 @@ define(['text!view/shared_view.html',
             var envId = e.target.value;
             if (envId) {
                 var categoryCollection = new CategoryCollection();
-                var categoryView = new CategoryView({collection: categoryCollection});
+                var categoryView = new CategoryView({environment_id: envId, collection: categoryCollection});
             }
 
         }
