@@ -52,5 +52,5 @@ button.object
 }
 .colorswatch.active
 {
-    margin-bottom: 10px;
+    border: 1px solid #000000;
 }
