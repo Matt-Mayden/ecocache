@@ -14,12 +14,12 @@ class Object extends Model
      */
     function __construct()
     {
-        parent::_construct();
+        parent::__construct();
     }
 
     public function getObjects()
     {
-        $objects = $this->ecoDb->all('SELECT `object_id`, `object_name` from `' . self::TABLE_NAME . '`');
+        $objects = $this->ecoDb->table(self::TABLE_NAME)->all();
         return $objects;
     }
 
