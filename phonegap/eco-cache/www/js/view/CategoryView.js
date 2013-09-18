@@ -3,8 +3,10 @@ define(['text!view/shared_view.html',
     'collection/ObjectCollection'], function(categoryTemplate, ObjectView, ObjectCollection) {
     var envView = Backbone.View.extend({
         el: '#app_container',
-        initialize: function() {
+        environment_id : '',
+        initialize: function(options) {
             this.collection.fetch({
+                data: { environment_id: options.environment_id },
                 success: _.bind(function() {
                     this.render();
                 }, this)

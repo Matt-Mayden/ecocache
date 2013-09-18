@@ -21,7 +21,7 @@ class Category extends Model
 
 	public function getCategories()
 	{
-		$query = "SELECT `category_id`, `category_name` FROM " . self::TABLE_NAME;
+		$query = "SELECT `category_id` as `id`, `category_name` as `name` FROM " . self::TABLE_NAME;
 		$categories = $this->ecoDb->all($query);
 
 	    return $categories;
@@ -36,7 +36,7 @@ class Category extends Model
             return array();
         }
 
-        $query = "SELECT " . self::TABLE_NAME . ".`category_id`, " . self::TABLE_NAME . ".`category_name` FROM " . self::TABLE_NAME . "
+        $query = "SELECT " . self::TABLE_NAME . ".`category_id` as `id`, " . self::TABLE_NAME . ".`category_name` as `name` FROM " . self::TABLE_NAME . "
                     LEFT JOIN `category_environment` ON " . self::TABLE_NAME . ".`category_id` = `category_environment`.`category_id`
                     WHERE `category_environment`.`environment_id` = " . $environment_id;
         $categories = $this->ecoDb->all($query);

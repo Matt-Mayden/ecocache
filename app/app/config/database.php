@@ -34,7 +34,7 @@ return array
 		(
 			'dsn'        => 'mysql:dbname=geo_cache;host=localhost;port=3306',
 			'username'   => 'root',
-			'password'   => '',
+			'password'   => '12345',
 			'persistent' => false,
 			'queries'    => array
 			(
