@@ -1,5 +1,6 @@
 define(['text!view/shared_view.html',
-    'view/ObjectPropertyView'], function(objectTemplate, ObjectPropertyView) {
+    'view/ObjectPropertyView',
+    'model/ObjectPropertyModel'], function(objectTemplate, ObjectPropertyView, ObjectPropertyModel) {
     var envView = Backbone.View.extend({
         el: '#app_container',
         initialize: function() {
@@ -23,7 +24,7 @@ define(['text!view/shared_view.html',
         displayObjectProperties: function(e) {
             var objectId = e.target.value;
             if (objectId) {
-                new ObjectPropertyView();
+                new ObjectPropertyView({model: new ObjectPropertyModel()});
             }
 
         }
