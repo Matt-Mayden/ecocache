@@ -35,14 +35,30 @@ class Discovery extends \mako\Controller
 
     public function post_index()
     {
-        $post['environment_id'] = \mako\Input::get("environment_id", null);
-        $post['category_id'] = \mako\Input::get("category_id", null);
-        $post['object_id'] = \mako\Input::get("object_id", null);
-        $post['size_id'] = \mako\Input::get("size_id", null);
-        $post['colour_id'] = \mako\Input::get("colour_id", null);
-        $post['location_id'] = \mako\Input::get("location_id", null);
+        $rawPost = $GLOBALS['HTTP_RAW_POST_DATA'];
+
+        $post = json_decode($rawPost, true);
+
+        if(isset($post["size"]))
+        {
+            $post['object_size_id'] = $post["size"];
+            unset($post['size']);
+        }
+
+        if(isset($post["colour"]))
+        {
+            $post['object_colour'] = $post["colour"];
+            unset($post['colour']);
+        }
+
+        if(isset($post["position"]))
+        {
+            $post['object_position'] = $post["position"];
+            unset($post['position']);
+        }
 
         $this->model->putDiscovery($post);
+
     }
 }
 

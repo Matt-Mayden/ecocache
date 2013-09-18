@@ -1,11 +1,6 @@
-<?php
-
-
-?>
-
 <html>
 
-<form action="Discovery">
+<form method="post" action="Discovery">
 <label>Environment</label>
 <input type="text" name="environment_id" />
 <br />
@@ -22,12 +17,12 @@
 <br />
 
 <label>Object Size</label>
-<input type="text" name="object_size" />
+<input type="text" name="size_id" />
 <br />
 <br />
 
 <label>Object Colour</label>
-<input type="text" name="object_colour" />
+<input type="text" name="colour_id" />
 <br />
 <br />
 
@@ -37,5 +32,5 @@
 <br />
 
 <input type="submit" />
-
+</form>
 </html>

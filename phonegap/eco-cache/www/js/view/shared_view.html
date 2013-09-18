@@ -3,7 +3,7 @@
         <% _.each(collection, function(object) 
         {
         %>
-        <button type="button" value="<%= object.id %>" class="<%- buttonName %>"> <img class="<%- buttonName %>" src="img/car.png" /> <%= object.name %></button>
+        <button type="button" value="<%= object.id %>" class="<%- buttonName %>"> <img class="<%- buttonName %>" src="img/<%- object.image %>" /> <%= object.name %></button>
         <%
         });
         %>
