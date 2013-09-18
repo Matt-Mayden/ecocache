@@ -1,54 +1,23 @@
-<html>
-<head>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css">
-<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css">
-<style>
-.container{background-color:#f4f4f4}
-.btn-default {
-    padding: 5px;
-    font-size: 11pt;
-    margin:16px;
-    width:110px;
-    margin:0px 16px 0px 0px;
-    }
-.row
-{
-    margin-bottom:30px;    
-}
-.colorswatch
-{
-    width:30px;
-    height:30px;
-    margin-right:20px;
-    border:none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-.reward
-{
-    color:#DDB55C;
-}
-
-</style>
-<!-- Latest compiled and minified JavaScript -->
-<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>   
-</head>
-  <body>
-    <div class="container">
-        <h1 class="text-center reward">Well Done on Your Discovery!</h1>
-        <br /><br />
-        <div class="text-center reward">
-        <img src="../../img/score.png" />
-        <br /><br /><br />
-        <h2>You're a Nature Explorer</h2>
+<h1 class="text-center reward">Well Done on Your Discovery!</h1>
+<br /><br />
+<div class="text-center reward">
+    <img src="img/score.png" />
+    <br /><br /><br />
+    <h2>You're a Nature Explorer</h2>
+</div>
+<div class="text-left">
+    <div><br/></div>
+    <h1>Your Discoveries</h1>
+    <div>
+        <% _.each(collection, function(object) 
+        {
+        %>
+        <div class="row text-center">
+            <div class="span3"><%- object.environment_name %> ==></div>
+            <div class="span3"><%- object.category_name %> ==></div>
+            <div class="span3"><%- object.object_name %></div>
         </div>
-        <div class="text-left">
-            
+        <%
+        });
+        %>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../vendor/jquery/jquery.js"></script>
-  </body>
-</html>

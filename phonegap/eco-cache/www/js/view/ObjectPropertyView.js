@@ -1,5 +1,6 @@
 define(['text!view/object_properties_view.html',
-    'view/ObjectPropertyView'], function(objectPropertyTemplate, ObjectPropertyView) {
+    'view/ObjectPropertyView',
+    'view/DiscoveryView'], function(objectPropertyTemplate, ObjectPropertyView, DiscoveryView) {
     var envView = Backbone.View.extend({
         el: '#app_container',
         options: '',
@@ -39,9 +40,10 @@ define(['text!view/object_properties_view.html',
             this.model.set(data);
             this.model.save(null, {
                 success: _.bind(function(model, response) {
-                    
+                    new DiscoveryView();
                 },this)
             });
+            new DiscoveryView();
         }
     });
     return envView;
