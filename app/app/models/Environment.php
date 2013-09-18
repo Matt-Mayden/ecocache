@@ -19,7 +19,7 @@ class Environment extends Model
 
     public function getEnvironments()
     {
-        $environments = $this->ecoDb->all('SELECT environment_id as `id`, environment_name as `name` from `' . self::TABLE_NAME . '`');
+        $environments = $this->ecoDb->all('SELECT environment_id as `id`, environment_name as `name`, `image` from `' . self::TABLE_NAME . '`');
         return $environments;
     }
 
