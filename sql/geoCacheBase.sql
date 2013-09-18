@@ -1,6 +1,8 @@
 #Create DB
 CREATE DATABASE `geo_cache` /*!40100 COLLATE 'utf8_unicode_ci' */;
 
+use `geo_cache`;
+
 #environment table - description of area user is spotting from
 CREATE TABLE `environment` (
 	`environment_id` INT(10) NOT NULL AUTO_INCREMENT,

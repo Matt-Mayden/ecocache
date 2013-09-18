@@ -5,16 +5,17 @@
  *
  */
 namespace app\controllers;
-use app\models as models
-class Category
+use app\models as models;
+class Category extends \mako\Controller
 {
-	private $categoryModel = null;
+    const RESTFUL = true;
+	private $model = null;
 
 	/**
 	 * Constructor
 	 *
 	 */
-	__construct()
+	function __construct()
 	{
 		$this->model = new models\Category();
 	}
@@ -23,12 +24,25 @@ class Category
 	 *
 	 *
 	 */
-	public function getCategories()
+	public function get_index()
 	{
-		$catArr = $this->model->getCategories();
-		$catJson = json_encode($catArr);
+	    $environment_id = \mako\Input::get("environment_id", null);
 
-		return $catJson;
+	    if(isset($environment_id))
+	    {
+	        $categories = $this->model->getCategoriesForEnvironment($environment_id);
+	        $categoriesJson = json_encode($categories);
+
+	        echo $categoriesJson;
+	    }
+	    else
+	    {
+	        $categories = $this->model->getCategories();
+		    $categoriesJson = json_encode($categories);
+
+		    echo $categoriesJson;
+	    }
+
 	}
 }
 

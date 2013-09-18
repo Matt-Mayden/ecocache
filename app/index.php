@@ -27,15 +27,8 @@ define('MAKO_APPLICATION_PATH', __DIR__ . '/app');
 
 require __DIR__ . '/vendor/mako/framework/src/mako/boot.php';
 
-mako\Mako::factory()->run();
-
 mako\ClassLoader::directory('app/models/');
+mako\ClassLoader::directory('app/controllers/');
 
-//require_once("app/models/Environment.php");
-
-$environment = new Environment();
-
-$environments = $environment->getEnvironments();
-
-var_dump($environments);
-
+mako\Mako::factory()->run();
+?>
