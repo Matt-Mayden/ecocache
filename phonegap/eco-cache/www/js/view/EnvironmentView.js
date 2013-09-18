@@ -14,15 +14,17 @@ define(['text!view/shared_view.html',
         render: function() {
             $(this.el).html(_.template(envTemplate)({
                 collection: this.collection.toJSON(),
-                message: 'Where are you?'
+                message: 'Where are you?',
+                buttonName: 'environment'
             }));
             return this;
         },
         events: {
-            "click .btn-default": "getCategories"
+            "click .environment": "getCategories"
         },
         getCategories: function(e) {
-            var envId = e.target.value;
+                       
+            var envId = e.currentTarget.value;
             if (envId) {
                 var categoryCollection = new CategoryCollection();
                 var categoryView = new CategoryView({collection: categoryCollection});

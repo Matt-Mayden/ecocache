@@ -14,15 +14,16 @@ define(['text!view/shared_view.html',
         render: function() {
             $(this.el).html(_.template(objectTemplate)({
                 collection: this.collection.toJSON(),
-                message: 'What exactly did you see?'
+                message: 'What exactly did you see?',
+                buttonName: 'object'
             }));
             return this;
         },
         events: {
-            "click .btn-default": "displayObjectProperties"
+            "click .object": "displayObjectProperties"
         },
         displayObjectProperties: function(e) {
-            var objectId = e.target.value;
+            var objectId = e.currentTarget.value;
             if (objectId) {
                 new ObjectPropertyView({model: new ObjectPropertyModel()});
             }

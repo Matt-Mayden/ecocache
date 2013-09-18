@@ -1,11 +1,41 @@
-.container{background-color:#f4f4f4}
-.btn-default {
-    padding: 5px;
-    font-size: 11pt;
-    margin:16px;
-    width:110px;
-    margin:0px 16px 0px 0px;
+html, body, div, span, object, form, input, h1, h2, button, label, a, img
+{
+    -moz-user-select: none;
+    -webkit-user-select: none; /* this will work for QtWebKit in future */
+    -webkit-user-drag: none;
 }
+
+.container
+{
+    background-color:#f4f4f4;
+    padding-left:100px;
+}
+
+button.environment
+{
+    height:170px;
+    width:170px;
+    margin:22px;
+}
+
+.environment img{
+    height:150px;
+    width:150px;
+}
+
+button.category
+{
+    height:170px;
+    width:170px;
+    margin:22px;
+}
+button.object
+{
+    height:170px;
+    width:170px;
+    margin:22px;
+}
+
 .row
 {
     margin-bottom:30px;    

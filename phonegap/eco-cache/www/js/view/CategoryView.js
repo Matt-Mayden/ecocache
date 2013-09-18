@@ -14,16 +14,16 @@ define(['text!view/shared_view.html',
         render: function() {
             $(this.el).html(_.template(categoryTemplate)({
                 collection: this.collection.toJSON(),
-                message: 'What did you see?'
+                message: 'What did you see?',
+                buttonName: 'category'
             }));
             return this;
         },
         events: {
-            "click .btn-default": "getObjects"
+            "click .category": "getObjects"
         },
         getObjects: function(e) {
-            console.log('calling me');
-            var categoryId = e.target.value;
+            var categoryId = e.currentTarget.value;
             if (categoryId) {
                 var objectCollection = new ObjectCollection();
                 new ObjectView({collection: objectCollection});
